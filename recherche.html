@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANETTE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    "https://api.rawg.io/api/platforms?key=06e6adbb976e4866a61db1345bbffdbc"
+    <header>
+        <h1>MANETTE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="recherche.html">Recherche</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>RECHERCHE</h2>
+        <form>
+            <label for="game-search">Rechercher un jeu :</label>
+            <input type="text" id="game-search" name="game-search" placeholder="Nom du jeu" onkeyup="showSuggestions()">
+            <button type="button" onclick="searchGame()">Rechercher</button>
+            <ul id="suggestions"></ul>
+        </form>
+    </main>
+</body>
+</html>
+
+<script>
+   const url = "https://api.rawg.io/api/games?key=06e6adbb976e4866a61db1345bbffdbc&dates=2019-09-01,2019-09-30&platforms=18,1,7";
+   
+   fetch(url)
+   .then(response => {  
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+  });
+
+    </script>
